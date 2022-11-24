@@ -4,7 +4,7 @@
 //#include "yamlParser/yamlParser.hpp"
 #include <iostream>
 
-int main()
+int main(int argc, char *argv[])
 {
   std::cout << "Let's fight with CMake, Docker, and some dependencies!" << std::endl << std::endl;
 
