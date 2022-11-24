@@ -21,8 +21,19 @@ int main()
   //inspectDirectory();
   //std::cout << std::endl;
 
-  //std::cout << "Parse some yaml file with yaml-cpp" << std::endl;
-  //parseConfig();
+  
+  //if ( argc == 2 )
+  //{
+  //  const std::string yamlFile( argv[1] );
+  //  std::cout << "Parse some yaml file with yaml-cpp" << std::endl;
+  //  std::cout << "  " << yamlFile << std::endl;
+  //  parseConfig( yamlFile );
+  //}
+  //else
+  //{
+  //  std::cout << "To parse a yaml file please specify file on command line" << std::endl;
+  //  std::cout << "  ./cpackexample YAMLFILE" << std::endl;
+  //}
 
   return 0;
 }

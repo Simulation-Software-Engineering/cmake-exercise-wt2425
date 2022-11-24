@@ -1,3 +1,5 @@
 #pragma once
 
-void parseConfig();
+#include<string>
+
+void parseConfig(const std::string yamlFile);

@@ -2,7 +2,7 @@
 #include "yaml-cpp/yaml.h"
 #include <iostream>
 
-void parseConfig(){
-  YAML::Node config = YAML::LoadFile("../yamlParser/config.yml");
+void parseConfig(const std::string yamlFile){
+  YAML::Node config = YAML::LoadFile(yamlFile);
   std::cout << "Version: " << config["version"].as<std::string>() << std::endl;
 }
