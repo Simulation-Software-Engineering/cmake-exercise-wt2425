@@ -14,18 +14,18 @@ find_package(
   container filesystem
 )
 
-# find_package(yaml-cpp REQUIRED CONFIG)
-# ###
+find_package(yaml-cpp REQUIRED CONFIG)
 
+# ###
 add_executable(
   main
   main.cpp
   fem/fem.cpp
   filesystem/filesystem.cpp
   flatset/flatset.cpp
-  # yamlParser/yamlParser.cpp
+  yamlParser/yamlParser.cpp
 )
 
 DEAL_II_SETUP_TARGET(main)
 
-target_link_libraries(main Boost::container Boost::filesystem)
+target_link_libraries(main Boost::container Boost::filesystem yaml-cpp)

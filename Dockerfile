@@ -21,8 +21,8 @@ RUN apt update && apt install -y build-essential cmake git wget vim
 
 RUN apt install -y libdeal.ii-dev libboost-all-dev
 
-# RUN git clone https://github.com/jbeder/yaml-cpp ./yaml-cpp && \
-#     mkdir ./yaml-cpp/build && cd ./yaml-cpp/build && \
-#     cmake .. && make && make install
+RUN git clone https://github.com/jbeder/yaml-cpp ./yaml-cpp && \
+    mkdir ./yaml-cpp/build && cd ./yaml-cpp/build && \
+    cmake .. && make && make install
 	
 # ENV LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/usr/local/lib"
