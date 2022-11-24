@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 
-WORKDIR /root
-COPY /cmake root
+WORKDIR /cmake_exercise
+COPY /cmake cmake_exercise
 
 COPY inittimezone /usr/local/bin/inittimezone
 RUN inittimezone
