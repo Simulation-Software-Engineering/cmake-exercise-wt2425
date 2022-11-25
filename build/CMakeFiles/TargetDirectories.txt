@@ -1,3 +1,0 @@
-/home/anja/Documents/SimulationSoftwareEngineering/cmake-exercise-wt2223/build/CMakeFiles/fight.dir
-/home/anja/Documents/SimulationSoftwareEngineering/cmake-exercise-wt2223/build/CMakeFiles/edit_cache.dir
-/home/anja/Documents/SimulationSoftwareEngineering/cmake-exercise-wt2223/build/CMakeFiles/rebuild_cache.dir
