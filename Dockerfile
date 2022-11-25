@@ -13,10 +13,11 @@ RUN apt install -y libboost-all-dev
 # Add some aliases for convenience
 RUN echo "alias build='mkdir build && cd build && cmake ..'" >> ~/.bashrc 
 RUN echo "alias rmb='rm -rf build'" >> ~/.bashrc
+RUN echo "alias ..='cd ..'" >> ~/.bashrc
+
+COPY . ./usr/src/app/cmake-exercise-wt2223/
 
 # Set working directory
-WORKDIR /usr/src/app
-
-COPY . ./cmake-exercise-wt2223/
+WORKDIR /usr/src/app/cmake-exercise-wt2223
 
 CMD ["/bin/bash"]
