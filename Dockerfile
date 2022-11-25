@@ -7,9 +7,16 @@ RUN inittimezone
 RUN apt update -y && apt upgrade -y
 RUN apt install -y build-essential cmake git vim
 
+# Install Boots library
+RUN apt install -y libboost-all-dev
+
+# Add some aliases for convenience
+RUN echo "alias build='mkdir build && cd build && cmake ..'" >> ~/.bashrc 
+RUN echo "alias rmb='rm -rf build'" >> ~/.bashrc
+
+# Set working directory
 WORKDIR /usr/src/app
 
-RUN git clone https://github.com/seinan9/cmake-exercise-wt2223.git
+COPY . ./cmake-exercise-wt2223/
 
 CMD ["/bin/bash"]
-
