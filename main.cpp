@@ -1,10 +1,10 @@
-//#include "fem/fem.hpp"
-//#include "flatset/flatset.hpp"
-//#include "filesystem/filesystem.hpp"
+#include "fem/fem.hpp"
+#include "flatset/flatset.hpp"
+#include "filesystem/filesystem.hpp"
 //#include "yamlParser/yamlParser.hpp"
 #include <iostream>
 
-int main(int argc, char *argv[])
+int main()
 {
   std::cout << "Let's fight with CMake, Docker, and some dependencies!" << std::endl << std::endl;
 
@@ -13,14 +13,13 @@ int main(int argc, char *argv[])
   fem.run();
   std::cout << std::endl;
 
-  std::cout << "Modify a flat set using boost container" << std::endl;
+ std::cout << "Modify a flat set using boost container" << std::endl;
   modifyAndPrintSets();
   std::cout << std::endl;
 
   std::cout << "Inspect the current directory using boost filesystem" << std::endl;
   inspectDirectory();
   std::cout << std::endl;
-
   
   //if ( argc == 2 )
   //{
