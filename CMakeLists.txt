@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION "3.12")
 
 project("SUMANTH0703_CMAKE_EXERCISE")
 
-find_package(Boost 1.74 REQUIRED COMPONENTS
+find_package(Boost REQUIRED COMPONENTS
              container filesystem)
 
 FIND_PACKAGE(deal.II 9.3.2 REQUIRED
@@ -10,8 +10,8 @@ FIND_PACKAGE(deal.II 9.3.2 REQUIRED
   )
 DEAL_II_INITIALIZE_CACHED_VARIABLES()
 
-add_executable("HardFought" "main.cpp" "flatset/flatset.cpp" "filesystem/filesystem.cpp" "fem/fem.cpp")
+add_executable("main" "main.cpp" "flatset/flatset.cpp" "filesystem/filesystem.cpp" "fem/fem.cpp")
 
-DEAL_II_SETUP_TARGET(HardFought)
+DEAL_II_SETUP_TARGET(main)
 
-TARGET_LINK_LIBRARIES(HardFought Boost::filesystem Boost::container)
+TARGET_LINK_LIBRARIES(main Boost::filesystem Boost::container)
