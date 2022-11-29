@@ -4,9 +4,8 @@ COPY inittimezone /usr/local/bin/inittimezone
 RUN inittimezone
 
 RUN apt update -y && apt install -y build-essential cmake git wget vim libboost-all-dev libdeal.ii-dev
-
-WORKDIR /usr/local/src 
-RUN git clone https://github.com/bergdola/cmake-exercise-wt2223.git /usr/local/src/cmake-exercise-wt2223 && cd cmake-exercise-wt2223 
+ 
+RUN cd /usr/local/src && git clone https://github.com/bergdola/cmake-exercise-wt2223.git /usr/local/src/cmake-exercise-wt2223 && cd cmake-exercise-wt2223 
 RUN ls -a
 RUN git clone https://github.com/jbeder/yaml-cpp.git /usr/local/src/yaml-cpp && cd yaml-cpp
 RUN ls -a
