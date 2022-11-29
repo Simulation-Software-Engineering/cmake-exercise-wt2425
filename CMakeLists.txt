@@ -12,7 +12,7 @@ FIND_PACKAGE(deal.II 9.3.2 REQUIRED
   )
 DEAL_II_INITIALIZE_CACHED_VARIABLES()
 
-find_package(yaml-cpp REQUIRED) 
+find_package(yaml-cpp REQUIRED CONFIG) 
 
 add_executable(cmake-ex-bergdola "${SRC_FILES}")
 
