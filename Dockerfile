@@ -10,6 +10,7 @@ RUN git clone https://github.com/bergdola/cmake-exercise-wt2223.git
 WORKDIR /usr/local/src/cmake-exercise-wt2223
 RUN git clone https://github.com/jbeder/yaml-cpp.git /usr/local/src/yaml-cpp 
 WORKDIR /usr/local/src/cmake-exercise-wt2223/yaml-cpp
+RUN ls -a
 RUN mkdir -p build && cd build
 WORKDIR /usr/local/src/cmake-exercise-wt2223/yaml-cpp/build
 RUN cmake .. -DYAML_BUILD_SHARED_LIBS=on && make && make install
