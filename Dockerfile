@@ -11,7 +11,8 @@ RUN apt install -y wget
 RUN apt install -y vim
 RUN apt install -y libboost-all-dev
 RUN apt install -y libdeal.ii-dev
- 
+
+WORKDIR /home
 RUN git clone https://github.com/jbeder/yaml-cpp.git
 RUN mkdir /home/yaml-cpp/build
 WORKDIR /home/yaml-cpp/build
