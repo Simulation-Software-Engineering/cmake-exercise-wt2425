@@ -11,7 +11,8 @@ set(sourceFiles
         main.cpp
         fem/fem.cpp
         flatset/flatset.cpp
-        filesystem/filesystem.cpp)
+        filesystem/filesystem.cpp
+        yamlParser/yamlParser.cpp)
 
 add_executable(main ${sourceFiles})
 
