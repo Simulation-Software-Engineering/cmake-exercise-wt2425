@@ -25,11 +25,6 @@ RUN make install
 WORKDIR /home
 RUN git clone https://github.com/musteng/cmake-exercise-wt2223.git
 
-WORKDIR /home/cmake-exercise-wt2223
-#COPY CMakeLists.txt .
-
-
-RUN mkdir build
 WORKDIR /home/cmake-exercise-wt2223/build
 RUN cmake ..
 RUN make
