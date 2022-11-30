@@ -1,8 +1,5 @@
 FROM ubuntu:22.04
 
-COPY inittimezone /usr/local/bin/inittimezone
-RUN chmod +x /usr/local/bin/inittimezone
-
 RUN apt update && apt install -y \
     build-essential cmake git wget vim \
     libboost-all-dev libdeal.ii-dev
@@ -16,4 +13,5 @@ COPY . ~/cmake-exercise/
 RUN cd ~/cmake-exercise && mkdir build && \
     cmake .. && make && make install
 
-ENTRYPOINT [ "/bin/sh" ]
+ENTRYPOINT [ "bash" ]
+
