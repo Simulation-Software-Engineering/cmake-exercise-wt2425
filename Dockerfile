@@ -23,6 +23,7 @@ RUN make
 RUN make install
 
 WORKDIR /home
+RUN cd /home
 RUN git clone https://github.com/musteng/cmake-exercise-wt2223.git
 RUN mkdir /home/cmake-exercise-wt2223/build
 
