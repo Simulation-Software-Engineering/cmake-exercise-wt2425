@@ -26,5 +26,5 @@ WORKDIR /home
 RUN git clone https://github.com/musteng/cmake-exercise-wt2223.git
 
 WORKDIR /home/cmake-exercise-wt2223/build
-RUN cmake ..
-RUN make
+#RUN cmake ..
+#RUN make
