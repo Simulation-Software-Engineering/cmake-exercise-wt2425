@@ -7,14 +7,13 @@ RUN apt update && apt install -y \
     build-essential cmake git wget vim \
     libboost-all-dev libdeal.ii-dev
 
-RUN git clone https://github.com/jbeder/yaml-cpp  ~/yaml-cpp && \
+RUN git clone https://github.com/jbeder/yaml-cpp  ~/yaml-cpp \
     && mkdir -p ~/yaml-cpp/build && cd ~/yaml-cpp/build  \
-    cmake .. && make && make install\
-    rm -rf ~/yaml-cpp
+    && cmake .. && make && make install
 
-COPY . ~/cmake-exercise/
-RUN cd ~/cmake-exercise && mkdir build && \
-    cmake .. && make && make install
+COPY . cmake-exercise/
+RUN rm -rf cmake-exercise/build && mkdir -p cmake-exercise/build/
+RUN cd cmake-exercise/build && cmake .. && make && make install
 
 ENTRYPOINT [ "bash" ]
 
