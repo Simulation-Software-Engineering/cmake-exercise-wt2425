@@ -16,5 +16,4 @@ COPY . ~/cmake-exercise/
 RUN cd ~/cmake-exercise && mkdir build && \
     cmake .. && make && make install
 
-ENTRYPOINT [ "bash" ]
-
+ENTRYPOINT [ "/bin/sh" ]
