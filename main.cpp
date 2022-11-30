@@ -1,7 +1,7 @@
-//#include "fem/fem.hpp"
+#include "fem/fem.hpp"
 #include "flatset/flatset.hpp"
 #include "filesystem/filesystem.hpp"
-//#include "yamlParser/yamlParser.hpp"
+#include "yamlParser/yamlParser.hpp"
 #include <iostream>
 
 int main(int argc, char *argv[])
@@ -21,19 +21,18 @@ int main(int argc, char *argv[])
   inspectDirectory();
   std::cout << std::endl;
 
-  
-  //if ( argc == 2 )
-  //{
-  //  const std::string yamlFile( argv[1] );
-  //  std::cout << "Parse some yaml file with yaml-cpp" << std::endl;
-  //  std::cout << "  " << yamlFile << std::endl;
-  //  parseConfig( yamlFile );
-  //}
-  //else
-  //{
-  //  std::cout << "To parse a yaml file please specify file on command line" << std::endl;
-  //  std::cout << "  ./cpackexample YAMLFILE" << std::endl;
-  //}
+  if (argc == 2)
+  {
+    const std::string yamlFile(argv[1]);
+    std::cout << "Parse some yaml file with yaml-cpp" << std::endl;
+    std::cout << "  " << yamlFile << std::endl;
+    parseConfig(yamlFile);
+  }
+  else
+  {
+    std::cout << "To parse a yaml file please specify file on command line" << std::endl;
+    std::cout << "  ./cpackexample YAMLFILE" << std::endl;
+  }
 
   return 0;
 }
