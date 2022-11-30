@@ -13,7 +13,7 @@ RUN apt install -y libboost-all-dev
 RUN apt install -y libdeal.ii-dev
  
 RUN git clone https://github.com/jbeder/yaml-cpp.git
-Run mkdir /home/yaml-cpp/build
+RUN mkdir /home/yaml-cpp/build
 WORKDIR /home/yaml-cpp/build
 RUN cmake ..
 RUN make
@@ -22,7 +22,7 @@ RUN make install
 WORKDIR /home 
 RUN cd /home
 RUN git clone https://github.com/senatirpan/cmake-exercise-wt2223.git
-Run mkdir /home/cmake-exercise-wt2223/build
+RUN mkdir /home/cmake-exercise-wt2223/build
 WORKDIR /home/cmake-exercise-wt2223/build
 RUN cmake ..
 RUN make
