@@ -1,10 +1,8 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.12)
 
 set(CMAKE_CXX_STANDARD 11)
 
 project(Exercise-Cmake)
-
-add_compile_options(-g -Wfatal-errors)
 
 find_package(Boost COMPONENTS container filesystem)
 find_package(yaml-cpp)
