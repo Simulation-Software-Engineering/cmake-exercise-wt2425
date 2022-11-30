@@ -1,5 +1,8 @@
 FROM ubuntu:22.04
 
+COPY inittimezone /usr/local/bin/inittimezone
+RUN inittimezone
+
 RUN apt update && apt install -y \
     build-essential cmake git wget vim \
     libboost-all-dev libdeal.ii-dev
