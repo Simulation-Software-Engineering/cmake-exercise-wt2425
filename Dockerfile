@@ -26,8 +26,8 @@ WORKDIR /home
 RUN git clone https://github.com/musteng/cmake-exercise-wt2223.git
 
 WORKDIR /home/cmake-exercise-wt2223
-COPY CMakeLists.txt .
-COPY main.cpp .
+#COPY CMakeLists.txt .
+
 
 RUN mkdir build
 WORKDIR /home/cmake-exercise-wt2223/build
