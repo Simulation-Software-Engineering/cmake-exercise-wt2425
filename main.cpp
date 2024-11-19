@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
   //else
   //{
   //  std::cout << "To parse a yaml file please specify file on command line" << std::endl;
-  //  std::cout << "  ./cpackexample YAMLFILE" << std::endl;
+  //  std::cout << "  ./main YAMLFILE" << std::endl;
   //}
 
   return 0;
