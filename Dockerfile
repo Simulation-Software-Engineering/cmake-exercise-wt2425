@@ -1,11 +1,26 @@
 FROM ubuntu:24.04
 
+# Install dependencies
 RUN apt-get update && \
     apt-get install --no-install-recommends -y build-essential cmake unzip wget vim libboost-all-dev libdeal.ii-dev && \
     rm -rf /var/lib/apt/lists/*
 
+# Download and install yaml-cpp 0.6.3
+ADD https://github.com/jbeder/yaml-cpp/archive/refs/tags/yaml-cpp-0.6.3.zip /tmp
+RUN unzip /tmp/yaml-cpp-0.6.3.zip -d /tmp && \
+    cd /tmp/yaml-cpp-yaml-cpp-0.6.3 && \
+    mkdir build && \
+    cd build && \
+    cmake .. && \
+    make -j4 && \
+    make install && \
+    rm -rf /tmp/yaml-cpp-0.6.3.zip /tmp/yaml-cpp-yaml-cpp-0.6.3
+
+# Set up the working directory
 RUN mkdir -p /app/cmake-exercise
 WORKDIR /app/cmake-exercise
+
+# Copy the source code
 COPY fem/ /app/cmake-exercise/fem/
 COPY filesystem/ /app/cmake-exercise/filesystem/
 COPY flatset/ /app/cmake-exercise/flatset/

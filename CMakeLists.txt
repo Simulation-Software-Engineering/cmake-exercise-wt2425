@@ -3,23 +3,34 @@ cmake_minimum_required(VERSION 3.12)
 # Set the project name
 project("cmake-exercise")
 
-# Add the executable
-add_executable(main main.cpp)
 
-# Add libraries
-add_library(flatset flatset/flatset.cpp)
-add_library(fs filesystem/filesystem.cpp)
-add_library(fem fem/fem.cpp)
-# add_library(yamlParser yamlParser/yamlParser.hpp)
-
-# Add packages
+# Add required packages
 # Boost
-find_package(Boost 1.83 REQUIRED)
+find_package(Boost 1.83 REQUIRED COMPONENTS container filesystem)
+
 # deal.II
 find_package(deal.II 9.3.0 REQUIRED
   HINTS ${DEAL_II_DIR} ../ ../../ $ENV{DEAL_II_DIR}
 )
-# OpenMPI
-find_package(MPI REQUIRED)
+deal_ii_initialize_cached_variables()
 
-target_link_libraries(main PRIVATE flatset fs boost_container boost_filesystem)
+# yaml-cpp
+find_package(yaml-cpp REQUIRED)
+
+
+# Add the sources
+set(SOURCES
+    main.cpp
+    fem/fem.cpp
+    filesystem/filesystem.cpp
+    flatset/flatset.cpp
+    yamlParser/yamlParser.cpp
+)
+
+# Add the executable
+add_executable(main ${SOURCES})
+
+# Link the libraries
+target_link_libraries(main boost_container boost_filesystem yaml-cpp)
+
+deal_ii_setup_target(main)
