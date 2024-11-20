@@ -7,7 +7,7 @@ Repository for the [CMake exercise](https://github.com/Simulation-Software-Engin
 Open this repository in VSCode, type Ctrl + Shift + P and enter: "Dev Containers: Reopen in Container"
 
 The process of building the container takes a while.
-When finished, VSCode is opened inside the container and the files of the repository are mounted under `/workspaces/cmake-exercise-wt2425`.
+When finished, VSCode is opened inside the container and the files of the repository are mounted under `/workspaces` and the folder name under which the repository was cloned.
 
 The project can be built with CMake and Make:
 
