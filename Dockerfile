@@ -12,7 +12,7 @@ RUN apt install -y wget
 
 WORKDIR /root
 RUN wget https://github.com/jbeder/yaml-cpp/archive/refs/tags/yaml-cpp-0.6.3.zip
-RUN unzip -o yaml-cpp-0.6.3.zip -d yamlcpp
-RUN cd yamlcpp && cmake . && make install
+RUN unzip -o yaml-cpp-0.6.3.zip
+RUN cd yaml-cpp-yaml-cpp-0.6.3 && cmake . && make install
 
 ENTRYPOINT [ "/bin/bash" ]
