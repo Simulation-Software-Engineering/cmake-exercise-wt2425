@@ -8,3 +8,5 @@ Makefile
 clean.sh
 mount.txt
 MyProject
+main
+build
