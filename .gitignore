@@ -1,0 +1,10 @@
+lib
+.bash_history
+Makefile
+CMakeFiles
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+clean.sh
+mount.txt
+MyProject

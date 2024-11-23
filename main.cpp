@@ -1,7 +1,7 @@
-//#include "fem/fem.hpp"
-//#include "flatset/flatset.hpp"
-//#include "filesystem/filesystem.hpp"
-//#include "yamlParser/yamlParser.hpp"
+  // #include "fem/fem.hpp"
+// #include "flatset/flatset.hpp"
+#include "filesystem/filesystem.hpp"
+// #include "yamlParser/yamlParser.hpp"
 #include <iostream>
 
 int main(int argc, char *argv[])
@@ -17,9 +17,9 @@ int main(int argc, char *argv[])
   //modifyAndPrintSets();
   //std::cout << std::endl;
 
-  //std::cout << "Inspect the current directory using boost filesystem" << std::endl;
-  //inspectDirectory();
-  //std::cout << std::endl;
+  std::cout << "Inspect the current directory using boost filesystem" << std::endl;
+  inspectDirectory();
+  std::cout << std::endl;
 
   
   //if ( argc == 2 )
