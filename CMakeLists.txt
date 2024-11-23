@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.12) # Adjust according to your required version
+cmake_minimum_required(VERSION 3.12)
 project(main)
 
 set(LIBRARY_OUTPUT_PATH  ${CMAKE_BINARY_DIR}/lib)
@@ -16,7 +16,6 @@ target_link_libraries(main fs)
 target_link_libraries(main fltst)
 target_link_libraries(main fm)
 
-# Find Boost libraries (e.g., Boost Filesystem)
 find_package(Boost REQUIRED filesystem)
 include_directories(${Boost_INCLUDE_DIRS})
 target_link_libraries(main ${Boost_LIBRARIES})

@@ -5,8 +5,12 @@ CMakeFiles
 CMakeCache.txt
 cmake_install.cmake
 Makefile
+build
 clean.sh
 mount.txt
 MyProject
 main
-build
+yaml-cpp-yaml-cpp-0.6.3
+.wget-hsts
+yaml-cpp-0.6.3.zip  
+.cmake
