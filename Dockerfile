@@ -6,4 +6,6 @@ RUN apt install -y cmake
 RUN apt install -y build-essential
 RUN apt install -y make
 RUN apt install -y libboost-all-dev
-# RUN apt install libdeal.ii-dev
+RUN apt install -y libdeal.ii-dev
+
+ENTRYPOINT [ "/bin/bash" ]
