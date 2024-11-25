@@ -1,0 +1,26 @@
+FROM ubuntu:24.04
+
+# Install base packages
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    cmake \
+    unzip \
+    wget \
+    vim \
+    libboost-all-dev \
+    libdeal.ii-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Add yaml-cpp specific installation
+RUN wget https://github.com/jbeder/yaml-cpp/archive/refs/tags/yaml-cpp-0.6.3.tar.gz \
+    && tar -xvzf yaml-cpp-0.6.3.tar.gz \
+    && cd yaml-cpp-yaml-cpp-0.6.3 \
+    && cmake -DBUILD_SHARED_LIBS=ON . \
+    && make \
+    && make install \
+    && ldconfig \
+    && cd .. \
+    && rm -rf yaml-cpp-yaml-cpp-0.6.3 yaml-cpp-0.6.3.tar.gz
+
+# Set working directory
+WORKDIR /cmake-exercise-wt2425
