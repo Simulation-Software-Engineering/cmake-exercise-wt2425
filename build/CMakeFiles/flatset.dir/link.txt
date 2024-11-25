@@ -1,0 +1,2 @@
+/usr/bin/ar qc libflatset.a CMakeFiles/flatset.dir/flatset/flatset.cpp.o
+/usr/bin/ranlib libflatset.a

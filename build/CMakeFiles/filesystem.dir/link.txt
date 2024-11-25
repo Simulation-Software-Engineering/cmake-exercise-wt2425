@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfilesystem.a CMakeFiles/filesystem.dir/filesystem/filesystem.cpp.o
+/usr/bin/ranlib libfilesystem.a
