@@ -1,0 +1,22 @@
+{
+	"name": "cmake-exercise",
+	"build": {
+	  "dockerfile": "Dockerfile",
+	  "context": ".."
+	},
+	"settings": {
+	  "terminal.integrated.defaultProfile.linux": "bash"
+	},
+	"extensions": [
+	  "ms-vscode.cmake-tools",
+	  "ms-vscode.cpptools",
+	  "twxs.cmake",
+	  "ms-python.python"
+	],
+	"remoteUser": "root",
+	"workspaceFolder": "/workspace",
+	"mounts": [
+	  "source=${localWorkspaceFolder},target=/workspace,type=bind"
+	]
+  }
+  
