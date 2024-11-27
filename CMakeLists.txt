@@ -1,12 +1,6 @@
 cmake_minimum_required(VERSION "3.12")
 project(pettersncmake)
 
-#find_package(deal.II)
-
-#file (GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS fem/*.cpp)
-#add_library(fem "${SRC_FILES}")
-#target_link_libraries(fem deal.II)
-
 find_package(Boost
     COMPONENTS container filesystem)
 
@@ -20,11 +14,12 @@ target_link_libraries(flatset boost_container)
 
 find_package(deal.II 9.5.0 REQUIRED CONFIG)
 
-file (GLOB_RECURSE SRC_FILES3 CONFIGURE_DEPENDS fem/*.cpp)
-add_library(fem "${SRC_FILES3}")
-deal_ii_setup_target(fem DEBUG)
-target_link_libraries(fem deal.II)
+#file (GLOB_RECURSE SRC_FILES3 CONFIGURE_DEPENDS fem/*.cpp)
+#add_library(fem "${SRC_FILES3}")
+#deal_ii_setup_target(fem DEBUG)
+#target_link_libraries(fem deal.II)
 
 add_executable(main main.cpp)
+#deal_ii_setup_target(main)
 
-target_link_libraries(main flatset filesystem fem)
+target_link_libraries(main flatset filesystem) # fem)

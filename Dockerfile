@@ -16,6 +16,8 @@ RUN apt-get update && apt-get install -y \
     libdeal.ii-dev
 
 # Copy the source code into the container
+RUN mkdir -p /app/cmake-exercise
+WORKDIR /app/cmake-exercise
 COPY main.cpp .
 COPY CMakeLists.txt .
 COPY build_and_run.sh .
